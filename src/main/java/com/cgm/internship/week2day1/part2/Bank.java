@@ -14,13 +14,6 @@ public class Bank {
         this.balance = balance;
     }
 
-    public static void transferMoney(Bank a, Bank b, double amount){
-        double bankABalance=a.getBalance();
-        double bankBBalance=b.getBalance();
-//        a.s(bankABalance-amount)
-
-
-    }
 
     public String getBankName() {
         return bankName;
@@ -32,6 +25,18 @@ public class Bank {
 
     public double getBalance() {
         return balance;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+
+    public void setBankAccount(String bankAccount) {
+        this.bankAccount = bankAccount;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     @Override
