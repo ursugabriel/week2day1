@@ -18,13 +18,6 @@ public class QueueArray<T> {
         this.rear=-1;
     }
 
-//    public T peek() {
-//        if(rear==-1) {
-//            return null;
-//        }
-//        return  queue[front];
-//    }
-
     public boolean isEmpty(){
         return (front==-1 &&rear==-1);
     }
@@ -51,13 +44,14 @@ public class QueueArray<T> {
         if(isEmpty()){
             throw new IllegalStateException("Queue is empty, can't dequeue");
         }
-        else if(front==rear){
-            value=queue[front];
-            front=-1;
-            rear =-1;
+        else if(front==rear) {
+            value = queue[front];
+            front = -1;
+            rear = -1;
         }
         else {
             value = queue[front];
+            queue[front]=null ;
             front=(front+1)%DEFAULT_SIZE;
         }
         return value;

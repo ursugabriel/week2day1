@@ -4,15 +4,16 @@ package com.cgm.internship.week2day1.part1;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class StackArray <T> {
+public class StackArray <T>  {
 
     private T array[];
     private int top;
     private int size;
-    private static final int DEFAULT_SIZE=10;
+    private static final int MAX_SIZE=10;
+
 
     public StackArray(){
-        this(DEFAULT_SIZE);
+        this(MAX_SIZE);
     }
     public StackArray(int initSize){
         array=(T[]) new Object[initSize];
@@ -23,16 +24,13 @@ public class StackArray <T> {
         array[++top]=element;
     }
 
-    public void remove(int element){
-        array[element]=null;
-    }
     public T get(int i){
         return array[i];
     }
 
-//    public void list(StackArray[T] array){
-//        for(int i=0;i<array.length;i++){
-//            System.out.println(array[i]);
+//    public void list(){
+//        for (int i = 0, len = java.lang.reflect.Array.getLength(array); i < len; i++) {
+//            System.out.println(java.lang.reflect.Array.get(array, i));
 //        }
 //    }
 

@@ -287,8 +287,8 @@ public class Tests {
         for(Transaction tr2: transactions6){
             System.out.println(tr2);
         }
-//================================================================================================
-        //test equals and hashcode
+//==============================test equals and hashcode==================================================================
+
 //        Transaction t9= new Transaction();
 //        t9.setId(4);
 //        t9.setDate("30-07-2018");
@@ -303,6 +303,6 @@ public class Tests {
 //        System.out.println(t1.equals(t9));
 //        System.out.println(t1.hashCode());
 //        System.out.println(t9.hashCode());
-
+//=========================================================================================================================
     }
 }
