@@ -109,25 +109,25 @@ public class Tests {
 
         //add
         long startTime5 = System.nanoTime();
-        transactions.add(t5);
+        transactions2.add(t5);
         long estimated5 = System.nanoTime() - startTime5;
         Transaction.printResult("LinkedList Add",estimated5,"src/results.txt");
 
         //remove
         long startTime6 = System.nanoTime();
-        transactions.remove(t5);
+        transactions2.remove(t5);
         long estimated6 = System.nanoTime() - startTime6;
         Transaction.printResult("LinkedList Remove",estimated6,"src/results.txt");
 
         //compare with equals
         long startTime7 = System.nanoTime();
-        transactions.get(0).equals(t5);
+        transactions2.get(0).equals(t5);
         long estimated7 = System.nanoTime() - startTime7;
         Transaction.printResult("LinkedList equals",estimated7,"src/results.txt");
 
         //modify
         long startTime8 = System.nanoTime();
-        transactions.get(0).setId(6);
+        transactions2.get(0).setId(6);
         long estimated8 = System.nanoTime() - startTime8;
         Transaction.printResult("LinkedList modify",estimated8,"src/results.txt");
 
@@ -146,25 +146,25 @@ public class Tests {
 
         //add
         long startTime9 = System.nanoTime();
-        transactions.add(t5);
+        transactions3.add(t5);
         long estimated9 = System.nanoTime() - startTime9;
         Transaction.printResult("Vector Add",estimated9,"src/results.txt");
 
         //remove
         long startTime10 = System.nanoTime();
-        transactions.remove(t5);
+        transactions3.remove(t5);
         long estimated10 = System.nanoTime() - startTime10;
         Transaction.printResult("Vector Remove",estimated10,"src/results.txt");
 
         //compare with equals
         long startTime11 = System.nanoTime();
-        transactions.get(0).equals(t5);
+        transactions3.get(0).equals(t5);
         long estimated11 = System.nanoTime() - startTime11;
         Transaction.printResult("Vector equals",estimated11,"src/results.txt");
 
         //modify
         long startTime12 = System.nanoTime();
-        transactions.get(0).setId(6);
+        transactions3.get(0).setId(6);
         long estimated12 = System.nanoTime() - startTime12;
         Transaction.printResult("Vector modify",estimated12,"src/results.txt");
 
@@ -183,27 +183,27 @@ public class Tests {
 
         //add
         long startTime13 = System.nanoTime();
-        transactions.add(t5);
+        transactions4.put("Transaction No. 5",t5);
         long estimated13 = System.nanoTime() - startTime13;
         Transaction.printResult("TreeMap Add",estimated13,"src/results.txt");
 
         //remove
-        long startTime14 = System.nanoTime();
-        transactions.remove(t5);
-        long estimated14 = System.nanoTime() - startTime14;
-        Transaction.printResult("TreeMap Remove",estimated14,"src/results.txt");
+//        long startTime14 = System.nanoTime();
+//        transactions4.remove(t5);
+//        long estimated14 = System.nanoTime() - startTime14;
+//        Transaction.printResult("TreeMap Remove",estimated14,"src/results.txt");
 
         //compare with equals
-        long startTime15 = System.nanoTime();
-        transactions.get(0).equals(t5);
-        long estimated15 = System.nanoTime() - startTime15;
-        Transaction.printResult("TreeMap equals",estimated15,"src/results.txt");
+//        long startTime15 = System.nanoTime();
+//        transactions4.get(0).equals(t5);
+//        long estimated15 = System.nanoTime() - startTime15;
+//        Transaction.printResult("TreeMap equals",estimated15,"src/results.txt");
 
         //modify
-        long startTime16 = System.nanoTime();
-        transactions.get(0).setId(6);
-        long estimated16 = System.nanoTime() - startTime16;
-        Transaction.printResult("TreeMap modify",estimated16,"src/results.txt");
+//        long startTime16 = System.nanoTime();
+//        transactions4.get(0).setId(6);
+//        long estimated16 = System.nanoTime() - startTime16;
+//        Transaction.printResult("TreeMap modify",estimated16,"src/results.txt");
 
         System.out.println("TreeMap Transactions: ");
         for(Map.Entry<String,Transaction> entry : transactions4.entrySet()) {
@@ -222,27 +222,27 @@ public class Tests {
 
         //add
         long startTime17 = System.nanoTime();
-        transactions.add(t5);
+        transactions5.put("Transaction No. 5",t5);
         long estimated17 = System.nanoTime() - startTime17;
         Transaction.printResult("LinkedHashMap Add",estimated17,"src/results.txt");
 
         //remove
         long startTime18 = System.nanoTime();
-        transactions.remove(t5);
+        transactions5.remove(t5);
         long estimated18 = System.nanoTime() - startTime18;
         Transaction.printResult("LinkedHashMap Remove",estimated18,"src/results.txt");
 
         //compare with equals
-        long startTime19 = System.nanoTime();
-        transactions.get(0).equals(t5);
-        long estimated19 = System.nanoTime() - startTime19;
-        Transaction.printResult("LinkedHashMap equals",estimated19,"src/results.txt");
+//        long startTime19 = System.nanoTime();
+//        transactions5.get(0).equals(t5);
+//        long estimated19 = System.nanoTime() - startTime19;
+//        Transaction.printResult("LinkedHashMap equals",estimated19,"src/results.txt");
 
         //modify
-        long startTime20 = System.nanoTime();
-        transactions.get(0).setId(6);
-        long estimated20 = System.nanoTime() - startTime20;
-        Transaction.printResult("LinkedHashMap modify",estimated20,"src/results.txt");
+//        long startTime20 = System.nanoTime();
+//        transactions5.get(0).setId(6);
+//        long estimated20 = System.nanoTime() - startTime20;
+//        Transaction.printResult("LinkedHashMap modify",estimated20,"src/results.txt");
 
         System.out.println("LinkedHashMap Transactions: ");
         for(Map.Entry<String,Transaction> entry : transactions5.entrySet()) {
@@ -261,25 +261,25 @@ public class Tests {
 
         //add
         long startTime21 = System.nanoTime();
-        transactions.add(t5);
+        transactions6.add(t5);
         long estimated21 = System.nanoTime() - startTime21;
         Transaction.printResult("TreeSet Add",estimated21,"src/results.txt");
 
         //remove
         long startTime22 = System.nanoTime();
-        transactions.remove(t5);
+        transactions6.remove(t5);
         long estimated22 = System.nanoTime() - startTime22;
         Transaction.printResult("TreeSet Remove",estimated22,"src/results.txt");
 
         //compare with equals
         long startTime23 = System.nanoTime();
-        transactions.get(0).equals(t5);
+        ((TreeSet<Transaction>) transactions6).first().equals(t5);
         long estimated23 = System.nanoTime() - startTime23;
         Transaction.printResult("TreeSet equals",estimated23,"src/results.txt");
 
         //modify
         long startTime24 = System.nanoTime();
-        transactions.get(0).setId(6);
+        ((TreeSet<Transaction>) transactions6).first().setId(6);
         long estimated24 = System.nanoTime() - startTime24;
         Transaction.printResult("TreeSet modify",estimated24,"src/results.txt");
 
